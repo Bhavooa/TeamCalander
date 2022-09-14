@@ -1,0 +1,94 @@
+body{
+    background-color: rgb(125, 200, 225);
+}
+.header{
+    color: white;
+}
+.nav {
+  padding-left: 0px;
+  background-color: #16b1bce3;
+  text-align: center;
+  font-size: large;
+}
+.nav > li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+.nav > li:hover {
+  background-color: #009130;
+}
+.nav > li > a {
+  color: white;
+  text-decoration: none;
+}
+.text{
+  color: white;
+}
+
+/* calender section */
+
+li{
+  list-style: none;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+.calender-box{
+  display: grid;
+  grid-template-columns: 50px auto;
+  grid-template-rows: auto;
+  gap: 1px 1px;
+  grid-template-areas: 
+    ". topPart"
+    "timeSlot-section main";
+}
+
+.weekdays,
+.days{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.weekdays{
+  background: red;
+  text-align: center;
+}
+
+.days{
+  min-height: 2em;
+  text-align: center;
+}
+
+.topPart{
+  background: orange;
+  grid-area: topPart;
+}
+
+.timeSlot-section{
+  background: yellow;
+  grid-area: timeSlot-section;
+  justify-self: left;
+}
+
+.timeSlots{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeSlots li{
+  min-height: 30px;
+}
+
+.timeSlots li::after{
+  content: "";
+  position: absolute;
+  left: 10px;
+  width: 100%;
+  height: 1px;
+  background: lightgreen;
+  z-index: 1;
+}

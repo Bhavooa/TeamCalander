@@ -1,0 +1,13 @@
+Needs for site:
+login
+    coach
+        book training sessions
+        scheduel games
+        discription of practice
+        take attendance
+    player
+        opt in and out of scheduel game/practice
+        suggest practice
+Calender
+    chose a month
+    pick a year
