@@ -92,3 +92,7 @@ ul{
   background: lightgreen;
   z-index: 1;
 }
+
+.month{
+  text-align: center;
+}
