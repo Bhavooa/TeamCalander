@@ -26,21 +26,23 @@
   <div class="calender-box">
 
     <div class="topPart">
+      
       <label for="months" class="month">Choose a month:</label>
-      <select class="month">
-        <option value="January" onclick="setDate()">January</option>
-        <option value="Febuary" onclick="setDate()">Febuary</option>
-        <option value="March" onclick="setDate()">March</option>
-        <option value="April" onclick="setDate()">April</option>
-        <option value="May" onclick="setDate()">May</option>
-        <option value="June" onclick="setDate()">June</option>
-        <option value="July" onclick="setDate()">July</option>
-        <option value="August" onclick="setDate()">August</option>
-        <option value="September" onclick="setDate()">September</option>
-        <option value="October" onclick="setDate()">October</option>
-        <option value="November" onclick="setDate()">November</option>
-        <option value="December" onclick="setDate()">December</option>
+      <select class="month" id="month" onChange="setDate();" onChange="getStart();">
+        <option value="January">January</option>
+        <option value="Febuary">Febuary</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
       </select>
+      
       <ul class="weekdays">
         <li>Sun</li>
         <li>Mon</li>
@@ -50,40 +52,10 @@
         <li>Fri</li>
         <li>Sat</li>
       </ul>
-      <ul class="days" id="days">
-        
+      
+      <ul class="days" id="day">
       </ul>
     </div>
-
-    <!--             <div class="timeSlot-section">
-                <ul class="timeSlots">
-                    <li>12am</li>
-                    <li>1am</li>
-                    <li>2am</li>
-                    <li>3am</li>
-                    <li>4am</li>
-                    <li>5am</li>
-                    <li>6am</li>
-                    <li>7am</li>
-                    <li>8am</li>
-                    <li>9am</li>
-                    <li>10am</li>
-                    <li>11am</li>
-                    <li>12pm</li>
-                    <li>1pm</li>
-                    <li>2pm</li>
-                    <li>3pm</li>
-                    <li>4pm</li>
-                    <li>5pm</li>
-                    <li>6pm</li>
-                    <li>7pm</li>
-                    <li>8pm</li>
-                    <li>9pm</li>
-                    <li>10pm</li>
-                    <li>11pm</li>
-                </ul>
-            </div> -->
-
     <div class="eventContainer">
 
     </div>
