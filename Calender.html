@@ -11,7 +11,7 @@
   <title>Team Calender: About</title>
 </head>
 
-<body class="background">
+<body class="background" onload="createList()">
   <h1>
     <a href="HomeScreen.html" class="header">Team Calender</a>
   </h1>
@@ -28,7 +28,8 @@
     <div class="topPart">
       
       <label for="months" class="month">Choose a month:</label>
-      <select class="month" id="month" onChange="setDate();" onChange="getStart();">
+      <select class="month" id="month" onChange="setDate()">
+        <option>Select one</option>
         <option value="January">January</option>
         <option value="Febuary">Febuary</option>
         <option value="March">March</option>

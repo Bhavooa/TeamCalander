@@ -3,40 +3,47 @@ function setDate() {
   for(let i = 0; i < 40; i++){
     days.push("");
   }
-  createCal();
-  clearCal();
   
-  function clearCal() {
-    var date = document.getElementById("day");
-    var numOfDays = days.length;
-    alert(numOfDays);
-    for (let i = 0; i < numOfDays; i++) {
-      var day = date.getElementsByTagName("li");
-      day.remove();
-    }
-  }
+  createCal();
   
   function createCal() {
-    var start = getStart();
-    for (let i = 1; i < 32; i++) {
-      days[start + i] = i;
+    var start = day().getDay();
+    var end = getEnd();
+    for (let i = 1; i <= end; i++) {
+      days[start + i - 1] = i;
     }
-    for(let i = 0; i < days.length; i++){
-      var tag = document.createElement("li");
-      tag.setAttribute("id", "date");
-      var text = document.createTextNode(days[i]);
-      tag.appendChild(text);
-      var element = document.getElementById("day");
-      element.appendChild(tag);
+    
+    var date = document.querySelectorAll("ul.days > li");
+    
+    i = 0
+    for(const element of date){
+      element.innerHTML = days[i];
+      i++;
     }
   }
 
-  function getStart() {
+  function day() {
     var monthSelected = document.getElementById("month");
     var month = monthSelected.options[monthSelected.selectedIndex].value;
-    const d = new Date(month + " 1, 2022");
-    let day = d.getDay();
+    const day = new Date(month + " 1, 2022");
     return day;
+  }
+
+
+  function getEnd(){
+    var month = day().getMonth();
+    return new Date(2022, month + 1, 0).getDate();
+  }
+}
+
+function createList(){
+  for(let i = 0; i < 40; i++){
+    var tag = document.createElement("li");
+    tag.setAttribute("id", "date");
+    var text = document.createTextNode("");
+    tag.appendChild(text);
+    var element = document.getElementById("day");
+    element.appendChild(tag);
   }
 }
 
